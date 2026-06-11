@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Minijogo do Agricultor</title>
+    <title>Portal Agrinho 2026 - Produtividade Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Agrinho 2026</h1>
-        <p>Aprenda a melhorar a produção da sua fazenda de forma divertida!</p>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>Portal do Agricultor - Agrinho 2026</h1>
+            <p>Tecnologia e Sustentabilidade no Campo</p>
+        </div>
     </header>
 
-    <main>
-        <section class="game-section">
-            <h2>Minijogo: Aumente sua produção!</h2>
-            <div class="game-container">
-                <p>Produção atual: <span id="production">0</span> unidades</p>
-                <button id="plantButton">🌱 Plantar / Fertilizar</button>
-                <p id="message">Clique no botão para melhorar sua produção!</p>
+    <main class="container grid-layout">
+        <section class="info-panel">
+            <h2>Melhoria de Produção</h2>
+            <p>Bem-vindo ao simulador interativo. Aqui, você aprenderá como as decisões tecnológicas impactam diretamente a sua colheita e o meio ambiente.</p>
+            <div class="metrics-display">
+                <div class="metric-card">
+                    <span class="metric-title">Produtividade Média</span>
+                    <span class="metric-value">+35%</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-title">Economia de Água</span>
+                    <span class="metric-value">-40%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-panel">
+            <h2>Minijogo: Simulador Colheita Certa</h2>
+            <div id="game-container">
+                <div class="status-bar">
+                    <div>Recursos: <span id="recursos-val">1000</span> Moedas</div>
+                    <div>Produção: <span id="producao-val">0</span> Sacas</div>
+                    <div>Sustentabilidade: <span id="sustentabilidade-val">100</span>%</div>
+                </div>
+
+                <div class="game-actions">
+                    <button class="btn" onclick="investir('irrigacao')">Irrigação Inteligente (-200)</button>
+                    <button class="btn" onclick="investir('drone')">Mapeamento por Drone (-400)</button>
+                    <button class="btn" onclick="investir('adubo')">Adubação Orgânica (-150)</button>
+                </div>
+
+                <div class="game-controls">
+                    <button class="btn-main" onclick="avancarMes()">Avançar Mês / Colher</button>
+                    <button class="btn-reset" onclick="reiniciarJogo()">Reiniciar</button>
+                </div>
+
+                <div id="game-feedback" class="feedback-box">
+                    Selecione as melhorias tecnológicas e avance o mês para iniciar sua safra!
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>Projeto Agrinho 2026 - Educação e Tecnologia na Agricultura</p>
+    <footer class="main-footer">
+        <p>&copy; 2026 Projeto Agrinho Programação. Desenvolvido para a evolução do campo.</p>
     </footer>
 
     <script src="script.js"></script>

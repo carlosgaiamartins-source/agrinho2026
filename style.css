@@ -1,52 +1,175 @@
+/* Estilos Globais */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8f5;
-    color: #333;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f4;
+    color: #333;
 }
 
-header {
-    background-color: #4caf50;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header de Identidade Visual */
+.main-header {
+    background-color: #1b5e20;
     color: white;
+    padding: 30px 0;
     text-align: center;
-    padding: 20px 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-main {
-    padding: 20px;
+.main-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.main-header p {
+    margin: 5px 0 0 0;
+    color: #a5d6a7;
+    font-size: 1.1rem;
+}
+
+/* Disposição em Colunas */
+.grid-layout {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
-.game-section {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.info-panel {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.game-panel {
+    flex: 2;
+    min-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Painel Interno do Jogo */
+#game-container {
+    background-color: #fafafa;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
     padding: 20px;
-    width: 300px;
-    text-align: center;
+    margin-top: 15px;
 }
 
-button {
-    background-color: #4caf50;
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e8f5e9;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 20px;
+    border: 1px solid #c8e6c9;
+}
+
+.game-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Botões do Painel e Hover Effects */
+.btn {
+    background-color: #fff;
+    border: 2px solid #2e7d32;
+    color: #2e7d32;
+    padding: 10px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: #2e7d32;
     color: white;
+}
+
+.game-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-main {
+    flex: 2;
+    background-color: #ffc107;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+.btn-main:hover {
+    background-color: #ffb300;
 }
 
-footer {
+.btn-reset {
+    flex: 1;
     background-color: #e0e0e0;
+    border: none;
+    color: #333;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-box {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196f3;
+    padding: 15px;
+    border-radius: 4px;
+    font-style: italic;
+    min-height: 50px;
+}
+
+/* Cartões Informativos de Impacto */
+.metric-card {
+    background-color: #f1f8e9;
+    border-left: 4px solid #8bc34a;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 0 4px 4px 0;
+}
+
+.metric-title {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #33691e;
+}
+
+.main-footer {
+    background-color: #263238;
+    color: #b0bec5;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 14px;
+    padding: 15px 0;
 }
